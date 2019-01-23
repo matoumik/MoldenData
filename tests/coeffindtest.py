@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from MoldenData import MoldenData
-from Find_coeff_test import findorbs
-from Find_coeff_test import findorbsthresh
+from FindOrbs import findorbs_coeff
+from FindOrbs import findorbs_max
 
 MD = MoldenData("testfiles/porphyrazine.molden")
 
@@ -11,7 +11,7 @@ MD = MoldenData("testfiles/porphyrazine.molden")
 
 
 #print("3Dzz:")
-#print(findorbs(MD,"Fe[9]-3Dzz", 10))
+print(findorbs_coeff(MD,"Fe[9]-3Dzz", 10))
 #print("4Dzz:")
 #print(findorbs(MD,"Fe[9]-4Dzz", 10))
 #print("5Dzz:")
@@ -25,4 +25,4 @@ MD = MoldenData("testfiles/porphyrazine.molden")
 #print(findorbs(MD,"Fe[9]-5Dxy", 10))
 
 print("4Dzz:")
-print(findorbsthresh(MD,"Fe[9]-4Dzz", 0.1))
+print(findorbs_max(MD,"Fe[9]-4S"))
